@@ -8,22 +8,22 @@
 //   case "+":
 //     answer = number_1 + number_2;
 //     console.log(answer);
-//     alert(answer);
+//     alert(`${number_1} + ${number_2} = ${answer}`);
 //     break;
 //   case "-":
 //     answer = number_1 - number_2;
 //     console.log(answer);
-//     alert(answer);
+//     alert(`${number_1} - ${number_2} = ${answer}`);
 //     break;
 //   case "*":
 //     answer = number_1 * number_2;
 //     console.log(answer);
-//     alert(answer);
+//     alert(`${number_1} * ${number_2} = ${answer}`);
 //     break;
 //   case "/":
 //     answer = number_1 / number_2;
 //     console.log(answer);
-//     alert(answer);
+//     alert(`${number_1} / ${number_2} = ${answer}`);
 //     break;
 //   default:
 //     console.log("ОШИБКА!");
