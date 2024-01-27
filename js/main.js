@@ -1,122 +1,160 @@
 // ##########HomeWork-1####################################################
 
-// let numOrStr = prompt("input number or string");
-// console.log(numOrStr);
+// const hour = prompt("Ведите количество часов:");
 
 // switch (true) {
-//   case numOrStr === null:
-//     console.log("ви скасували");
-//     break;
-//   case numOrStr.trim() === "":
-//     console.log("Empty String");
-//     break;
-//   case isNaN(numOrStr):
-//     console.log(" number is Ba_NaN");
+//   case isNaN(hour):
+//     alert("ОЩИБКА! Вы вели не час!");
 //     break;
 //   default:
-//     console.log("OK!");
+//     washingMachine();
+// }
+
+// function washingMachine() {
+//   const answer = hour * 3600;
+//   alert(`В ${hour} часах -  ${answer} секунд.`);
 // }
 
 // ##########HomeWork-2####################################################
 
+// const autoBrands = ["Audi", "BMW", "Item", "Toyota"];
+
+// autoBrands.splice(2, 1);
+// console.log(autoBrands);
+
+// ##########HomeWork-3####################################################
+
+// const array = [
+//   16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37, 46, 4, -51, 27, -63, 4, -54,
+//   76, -4, 12, -35, 4, 47,
+// ];
+
 // 1.
-// let row = "";
-// for (let i = 10; i <= 20; i++) {
-//   row += i + (i < 20 ? ", " : "");
+
+// function washingMachine() {
+//   const positive = array.filter((element) => {
+//     return element > 0;
+//   });
+//   const howMany = positive.length;
+//   console.log(`Количество элементов: ${howMany}.`);
+//   const sum = positive.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+//   }, 0);
+//   console.log(`Сума элементов: ${sum}.`);
 // }
-// console.log(row);
+
+// washingMachine();
 
 // 2.
-// let row = "";
-// for (let i = 10; i <= 20; i++) {
-//   let number = i * i;
-//   row += number + (number < 400 ? ", " : "");
-// }
-// console.log(row);
+
+// const minElement = Math.min(...array);
+// const indexElement = array.indexOf(minElement);
+
+// console.log(
+//   `Минимальный элемент - ${minElement}, его порядковый номер - ${indexElement}.`
+// );
 
 // 3.
-// let row = "";
-// for (let i = 1; i <= 10; i++) {
-//   let answer = 7 * i;
-//   row += answer + (answer < 70 ? ", " : "");
-// }
-// console.log(row);
+
+// const maxElement = Math.max(...array);
+// const indexElement = array.indexOf(maxElement);
+
+// console.log(
+//   `Максимальный элемент - ${maxElement}, его порядковый номер - ${indexElement}.`
+// );
 
 // 4.
-// let sum = 0;
-// for (let i = 1; i <= 15; i++) {
-//   sum += i;
+
+// function washingMachine() {
+//   const negativeElement = array.filter((element) => {
+//     return element <= 0;
+//   });
+//   const quantity = negativeElement.length;
+//   console.log(`Всего негативных элементов: ${quantity}.`);
 // }
-// console.log(sum);
+
+// washingMachine();
 
 // 5.
-// let sum = 1;
-// for (let i = 15; i <= 35; i++) {
-//   sum *= i;
+
+// function washingMachine() {
+//   const positive = array.filter((element) => {
+//     return element > 0 && element % 2 !== 0;
+//   });
+
+//   const unpaired = positive.length;
+//   console.log(`Количество нечетных положительных элементов: ${unpaired}.`);
 // }
-// console.log(sum);
+
+// washingMachine();
 
 // 6.
-// let sum = 0;
-// for (let i = 1; i <= 500; i++) {
-//   sum += i;
+
+// function washingMachine() {
+//   const positive = array.filter((element) => {
+//     return element > 0 && element % 2 == 0;
+//   });
+
+//   const paired = positive.length;
+//   console.log(`Количество парных положительных элементов: ${paired}.`);
 // }
 
-// console.log(sum / 500);
+// washingMachine();
 
 // 7.
-// let sum = 0;
-// for (let i = 30; i <= 80; i = i + 2) {
-//   sum += i;
+
+// function washingMachine() {
+//   const positive = array.filter((element) => {
+//     return element > 0 && element % 2 == 0;
+//   });
+
+//   const sum = positive.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+//   });
+
+//   console.log(sum);
 // }
 
-// console.log(sum);
+// washingMachine();
 
 // 8.
-// let row = "";
-// for (i = 100; i <= 200; i++) {
-//   if (i % 3 == 0) {
-//     row += i + ", ";
-//   }
+
+// function washingMachine() {
+//   const positive = array.filter((element) => {
+//     return element > 0 && element % 2 !== 0;
+//   });
+//   const sum = positive.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+//   });
+
+//   console.log(sum);
 // }
-// console.log(row);
+
+// washingMachine();
 
 // 9.
-// let row = "";
-// let number = 200;
-// for (let i = 1; i <= number; i++) {
-//   if (number % i === 0) {
-//     row += i + (i < 200 ? ", " : "");
-//   }
+
+// function washingMachine() {
+//   const positive = array.filter((element) => {
+//     return element > 0;
+//   });
+
+//   const work = positive.reduce((accumulator, currentValue) => {
+//     return accumulator * currentValue;
+//   }, 1);
+//   console.log(work);
 // }
-// console.log(row);
+
+// washingMachine();
 
 // 10.
-// let row = "";
-// let number = 200;
-// for (let i = 1; i <= number; i++) {
-//   if (number % i === 0 && i % 2 === 0) {
-//     row += i + (i < 200 ? ", " : "");
-//   }
-// }
-// console.log(row);
 
-// 11.
-// let number = 200;
-// let sum = 0;
-// for (let i = 1; i <= number; i++) {
-//   if (number % i === 0 && i % 2 === 0) {
-//     sum += i;
-//   }
-// }
+// function washingMachine() {
+//   const biggest = Math.max(...array);
+//   const array_2 = array.map((element) => {
+//     return element == biggest ? element : 0;
+//   });
 
-// console.log(sum);
-
-// 12.
-// for (let i = 1; i <= 10; i++) {
-//   let row = "";
-//   for (let y = 1; y <= 10; y++) {
-//     row += i * y + "\t";
-//   }
-//   console.log(row);
+//   console.log(array_2);
 // }
+// washingMachine();
