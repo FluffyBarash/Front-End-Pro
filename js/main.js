@@ -17,9 +17,14 @@
 
 // ##########HomeWork-2####################################################
 
-// const autoBrands = ["Audi", "BMW", "Item", "Toyota"];
+// const autoBrands = ["Audi", "BMW", "Mercedes", "Toyota"];
 
-// autoBrands.splice(2, 1);
+// function removeELement(autoBrands, item) {
+//   const indexElement = autoBrands.indexOf(item);
+//   autoBrands.splice(indexElement, 1);
+// }
+
+// removeELement(autoBrands, "Mercedes");
 // console.log(autoBrands);
 
 // ##########HomeWork-3####################################################
