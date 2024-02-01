@@ -1,14 +1,14 @@
 // ##########HomeWork-1####################################################
 
-// function pow(num, degree) {
-//   let answer = "1";
-//   for (i = 0; i < degree; i++) {
-//     answer = answer * num;
-//   }
-//   console.log(answer);
-// }
+function pow(num, degree) {
+  if (degree == 1) {
+    return num;
+  } else {
+    return num * pow(num, degree - 1);
+  }
+}
 
-// pow(2, 3);
+alert(pow(3, 4));
 
 // ##########HomeWork-2####################################################
 
