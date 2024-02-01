@@ -1,14 +1,14 @@
 // ##########HomeWork-1####################################################
 
-function pow(num, degree) {
-  if (degree == 1) {
-    return num;
-  } else {
-    return num * pow(num, degree - 1);
-  }
-}
+// function pow(num, degree) {
+//   if (degree == 1) {
+//     return num;
+//   } else {
+//     return num * pow(num, degree - 1);
+//   }
+// }
 
-alert(pow(3, 4));
+// alert(pow(3, 4));
 
 // ##########HomeWork-2####################################################
 
