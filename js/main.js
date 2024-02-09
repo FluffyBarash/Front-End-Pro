@@ -1,89 +1,117 @@
-// // ##########HomeWork-1####################################################
+// ##########_HomeWork_1_####################################################
 
-// let users = [
-//   {
-//     index: 0,
-//     isActive: true,
-//     balance: "$2,226.60",
-//     name: "Eugenia Sawyer",
-//     gender: "female",
-//     phone: "+1 (840) 583-3207",
-//     address: "949 John Street, Rose, Puerto Rico, 1857",
-//   },
-//   {
-//     index: 1,
-//     isActive: true,
-//     balance: "$2,613.77",
-//     name: "Pauline Gallegos",
-//     gender: "female",
-//     phone: "+1 (985) 593-3328",
-//     address: "328 Greenpoint Avenue, Torboy, North Dakota, 6857",
-//   },
-//   {
-//     index: 2,
-//     isActive: false,
-//     balance: "$3,976.41",
-//     name: "Middleton Chaney",
-//     gender: "male",
-//     phone: "+1 (995) 591-2478",
-//     address: "807 Fleet Walk, Brutus, Arkansas, 9783",
-//   },
-//   {
-//     index: 3,
-//     isActive: true,
-//     balance: "$1,934.58",
-//     name: "Burns Poole",
-//     gender: "male",
-//     phone: "+1 (885) 559-3422",
-//     address: "730 Seba Avenue, Osage, Alabama, 6290",
-//   },
-//   {
-//     index: 4,
-//     isActive: true,
-//     balance: "$3,261.65",
-//     name: "Mcfadden Horne",
-//     gender: "male",
-//     phone: "+1 (942) 565-3988",
-//     address: "120 Scholes Street, Kirk, Michigan, 1018",
-//   },
-//   {
-//     index: 5,
-//     isActive: false,
-//     balance: "$1,790.56",
-//     name: "Suzette Lewis",
-//     gender: "female",
-//     phone: "+1 (837) 586-3283",
-//     address: "314 Dunne Place, Bawcomville, Guam, 9053",
-//   },
-// ];
+// 1.
 
-// let usersFilter = users.filter(
-//   (user) => parseFloat(user.balance.replace(/[^0-9.-]+/g, "")) > 2000
-// );
-// let phoneNumbers = usersFilter.map((user) => user.phone);
+// let array = ["Bob", 12, "Bill", 2, "Bob"];
 
-// console.log(phoneNumbers);
+// let sum = 0;
+// let quantity = 0;
+// let answer = 0;
 
-// let balance = users.reduce(
-//   (total, user) => total + parseFloat(user.balance.replace(/[^0-9.-]+/g, "")),
-//   0
-// );
-
-// console.log(`Общая сумма балансов всех пользователей: ${Math.floor(balance)}`);
-
-// ##########HomeWork-2####################################################
-
-// function sumFunction() {
-//   let answer = 0;
-
-//   function washingMachine(number) {
-//     answer += number;
-//     console.log(answer);
+// array.forEach((element) => {
+//   let id = array.indexOf(element);
+//   if (typeof element === "number") {
+//     sum += element;
+//     quantity++;
+//   } else {
+//     delete array[id];
 //   }
-//   return washingMachine;
+// });
+
+// answer = sum / quantity;
+
+// console.log(`Среднее арифметическое данных чисел - ${Math.round(answer)}.`);
+// console.log(array);
+
+// 2.
+
+// let x = Number(prompt(`Ведите первое число:`));
+// let y = Number(prompt(`Ведите второе число:`));
+// let znak = prompt(`Ведите знак (пример: : +, -, *, /, %, ^):`);
+
+// let answer = 0;
+
+// function doMath(x, znak, y) {
+//   switch (true) {
+//     case typeof x !== "number":
+//       console.log("Error!");
+//       break;
+//     case znak == "+":
+//       answer = x + y;
+//       console.log(`${x} + ${y} = ${answer}`);
+//       break;
+//     case znak == "-":
+//       answer = x - y;
+//       console.log(`${x} - ${y} = ${answer}`);
+//       break;
+//     case znak == "*":
+//       answer = x * y;
+//       console.log(`${x} * ${y} = ${answer}`);
+//       break;
+//     case znak == "/":
+//       answer = x / y;
+//       console.log(`${x} / ${y} = ${answer}`);
+//       break;
+//     case znak == "^":
+//       answer = Math.pow(x, y);
+//       console.log(`${x}^${y} = ${answer}`);
+//       break;
+//   }
 // }
 
-// let sum = sumFunction();
-// sum(3);
-// sum(5);
-// sum(20);
+// doMath(x, znak, y);
+
+// 3.
+
+// function createArray() {
+//   const numRows = +prompt("Введите количество строк в двумерном массиве:");
+//   const numCols = +prompt("Введите количество столбцов в каждой строке:");
+
+//   const Array = [];
+
+//   for (let i = 0; i < numRows; i++) {
+//     const row = [];
+//     for (let j = 0; j < numCols; j++) {
+//       const value = prompt(`Введите значение для элемента [${i}][${j}]:`);
+//       row.push(value);
+//     }
+//     Array.push(row);
+//   }
+
+//   return customArray;
+// }
+
+// const myArray = createArray();
+// console.log(myArray);
+
+// 4.
+
+// let phrase = prompt(`Ведите любую фразу:`);
+// let symbolOne = prompt(`Ведите первый символ:`);
+// let symbolTwo = prompt(`Ведите второй символ:`);
+
+// function washingMachine(text, symbols) {
+//   let result = "";
+//   for (let element of text) {
+//     if (!symbols.includes(element)) {
+//       result += element;
+//     }
+//   }
+//   alert(`Останется - ${result}.`);
+//   console.log(result);
+// }
+
+// washingMachine(phrase, [symbolOne, symbolTwo]);
+
+// ##########_HomeWork_2_####################################################
+
+// const input = document.querySelector(".field__input");
+// const div = document.querySelector(".opacity");
+
+// input.addEventListener("focus", () => {
+//   div.classList.toggle("div_text");
+// });
+
+// input.addEventListener("blur", () => {
+//   div.classList.toggle("div_text");
+// });

@@ -1,0 +1,48 @@
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.field {
+  background-color: gold;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid blue;
+  margin-right: 30px;
+}
+.field input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.field input::-webkit-input-placeholder {
+  border: none;
+}
+.field input::-moz-placeholder {
+  border: none;
+}
+.field input:-ms-input-placeholder {
+  border: none;
+}
+.field input::-ms-input-placeholder {
+  border: none;
+}
+.field input::placeholder {
+  border: none;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.div_text {
+  opacity: 1;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: bisque;
+  border: 1px solid blue;
+}
