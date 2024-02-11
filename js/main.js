@@ -2,116 +2,80 @@
 
 // 1.
 
-// let array = ["Bob", 12, "Bill", 2, "Bob"];
+// let answer = "";
 
-// let sum = 0;
-// let quantity = 0;
-// let answer = 0;
+// for (let i = 20; i <= 30; i += 0.5) {
+//   answer += i + " ";
+// }
 
-// array.forEach((element) => {
-//   let id = array.indexOf(element);
-//   if (typeof element === "number") {
-//     sum += element;
-//     quantity++;
-//   } else {
-//     delete array[id];
-//   }
-// });
-
-// answer = sum / quantity;
-
-// console.log(`Среднее арифметическое данных чисел - ${Math.round(answer)}.`);
-// console.log(array);
+// console.log(answer);
 
 // 2.
 
-// let x = Number(prompt(`Ведите первое число:`));
-// let y = Number(prompt(`Ведите второе число:`));
-// let znak = prompt(`Ведите знак (пример: : +, -, *, /, %, ^):`);
+// const $ = 27;
+// let answer = "";
 
-// let answer = 0;
-
-// function doMath(x, znak, y) {
-//   switch (true) {
-//     case typeof x !== "number":
-//       console.log("Error!");
-//       break;
-//     case znak == "+":
-//       answer = x + y;
-//       console.log(`${x} + ${y} = ${answer}`);
-//       break;
-//     case znak == "-":
-//       answer = x - y;
-//       console.log(`${x} - ${y} = ${answer}`);
-//       break;
-//     case znak == "*":
-//       answer = x * y;
-//       console.log(`${x} * ${y} = ${answer}`);
-//       break;
-//     case znak == "/":
-//       answer = x / y;
-//       console.log(`${x} / ${y} = ${answer}`);
-//       break;
-//     case znak == "^":
-//       answer = Math.pow(x, y);
-//       console.log(`${x}^${y} = ${answer}`);
-//       break;
-//   }
+// for (let i = 10; i <= 100; i += 10) {
+//   answer = i * $;
+//   console.log(`${i} Доллоров - ${answer} гривен.`);
 // }
-
-// doMath(x, znak, y);
 
 // 3.
 
-// function createArray() {
-//   const numRows = +prompt("Введите количество строк в двумерном массиве:");
-//   const numCols = +prompt("Введите количество столбцов в каждой строке:");
-
-//   const Array = [];
-
-//   for (let i = 0; i < numRows; i++) {
-//     const row = [];
-//     for (let j = 0; j < numCols; j++) {
-//       const value = prompt(`Введите значение для элемента [${i}][${j}]:`);
-//       row.push(value);
-//     }
-//     Array.push(row);
+// function washingMachine(number) {
+//   if (number < 2) {
+//     return "Число должно быть больше одного.";
+//   } else if (number === 2) {
+//     return "Простое число";
 //   }
 
-//   return customArray;
+//   let i = 2;
+//   const limit = Math.sqrt(number);
+
+//   while (i <= limit) {
+//     if (number % i === 0) {
+//       return "Составное число";
+//     }
+//     i += 1;
+//   }
+
+//   return "Простое число";
 // }
 
-// const myArray = createArray();
-// console.log(myArray);
+// console.log(washingMachine(4));
 
 // 4.
 
-// let phrase = prompt(`Ведите любую фразу:`);
-// let symbolOne = prompt(`Ведите первый символ:`);
-// let symbolTwo = prompt(`Ведите второй символ:`);
-
-// function washingMachine(text, symbols) {
-//   let result = "";
-//   for (let element of text) {
-//     if (!symbols.includes(element)) {
-//       result += element;
+// function washingMachine(number) {
+//   if (number < 3) {
+//     return "Ошибка! Число должно быть больше или равно трём.";
+//   } else {
+//     let i = 3;
+//     while (i <= number) {
+//       if (i == number) {
+//         return "Yes";
+//       }
+//       if (i != number) {
+//         i = i * 3;
+//       }
 //     }
 //   }
-//   alert(`Останется - ${result}.`);
-//   console.log(result);
 // }
 
-// washingMachine(phrase, [symbolOne, symbolTwo]);
+// console.log(washingMachine(9));
 
 // ##########_HomeWork_2_####################################################
 
-// const input = document.querySelector(".field__input");
-// const div = document.querySelector(".opacity");
+// const table = document.querySelector("#table");
 
-// input.addEventListener("focus", () => {
-//   div.classList.toggle("div_text");
-// });
-
-// input.addEventListener("blur", () => {
-//   div.classList.toggle("div_text");
-// });
+// let number = 1;
+// for (let i = 0; i < 10; i++) {
+//   const tr = document.createElement("tr");
+//   for (let j = 0; j < 10; j++) {
+//     const td = document.createElement("td");
+//     td.innerText = number;
+//     tr.append(td);
+//     number++;
+//   }
+//   table.append(tr);
+// }
