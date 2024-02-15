@@ -2,80 +2,59 @@
 
 // 1.
 
-// let answer = "";
+// let lineOne = prompt(`Ведите данные первое линии:`);
+// let lineTwo = prompt(`Ведите данные второй линии:`);
+// let lineThree = prompt(`Ведите данные третьей линии:`);
 
-// for (let i = 20; i <= 30; i += 0.5) {
-//   answer += i + " ";
-// }
-
-// console.log(answer);
+// alert(`Получилось: ${lineOne + lineTwo + lineThree}`);
 
 // 2.
 
-// const $ = 27;
-// let answer = "";
+// let number = prompt(`Ведите пятизначное число:`);
+// let numberLength = number.length;
 
-// for (let i = 10; i <= 100; i += 10) {
-//   answer = i * $;
-//   console.log(`${i} Доллоров - ${answer} гривен.`);
+// if (isNaN(number)) {
+//   alert("Error! Водить нужно цифры.");
+// } else if (numberLength > 5) {
+//   alert("Error! Чисел должно быть не больше пяти.");
+// } else if (numberLength < 5) {
+//   alert("Error! Недостаточно чисел.");
+// } else if (numberLength == 5) {
+//   alert(
+//     `Answer: ${number[0]} ${number[1]} ${number[2]} ${number[3]} ${number[4]}`
+//   );
 // }
-
-// 3.
-
-// function washingMachine(number) {
-//   if (number < 2) {
-//     return "Число должно быть больше одного.";
-//   } else if (number === 2) {
-//     return "Простое число";
-//   }
-
-//   let i = 2;
-//   const limit = Math.sqrt(number);
-
-//   while (i <= limit) {
-//     if (number % i === 0) {
-//       return "Составное число";
-//     }
-//     i += 1;
-//   }
-
-//   return "Простое число";
-// }
-
-// console.log(washingMachine(4));
-
-// 4.
-
-// function washingMachine(number) {
-//   if (number < 3) {
-//     return "Ошибка! Число должно быть больше или равно трём.";
-//   } else {
-//     let i = 3;
-//     while (i <= number) {
-//       if (i == number) {
-//         return "Yes";
-//       }
-//       if (i != number) {
-//         i = i * 3;
-//       }
-//     }
-//   }
-// }
-
-// console.log(washingMachine(9));
 
 // ##########_HomeWork_2_####################################################
 
-// const table = document.querySelector("#table");
+let button = document.querySelector(".button");
+let img = document.querySelector(".img");
 
-// let number = 1;
-// for (let i = 0; i < 10; i++) {
-//   const tr = document.createElement("tr");
-//   for (let j = 0; j < 10; j++) {
-//     const td = document.createElement("td");
-//     td.innerText = number;
-//     tr.append(td);
-//     number++;
+// button.addEventListener("click", () => {
+//   let imgNumber = "";
+//   let numberRandom = Math.floor(Math.random() * 11);
+//   if (numberRandom == 1) {
+//     imgNumber = "images/jpg.1.jpg";
+//   } else if (numberRandom == 2) {
+//     imgNumber = "images/jpg.2.jpg";
+//   } else if (numberRandom == 3) {
+//     imgNumber = "images/jpg.3.jpg";
+//   } else if (numberRandom == 4) {
+//     imgNumber = "images/jpg.4.jpg";
+//   } else if (numberRandom == 5) {
+//     imgNumber = "images/jpg.5.jpg";
+//   } else if (numberRandom == 6) {
+//     imgNumber = "images/jpg.6.jpg";
+//   } else if (numberRandom == 7) {
+//     imgNumber = "images/jpg.7.jpg";
+//   } else if (numberRandom == 8) {
+//     imgNumber = "images/jpg.8.jpg";
+//   } else if (numberRandom == 9) {
+//     imgNumber = "images/jpg.9.jpg";
+//   } else if (numberRandom == 10) {
+//     imgNumber = "images/jpg.10.jpg";
+//   } else if (numberRandom == 11) {
+//     imgNumber = "images/jpg.11.jpg";
 //   }
-//   table.append(tr);
-// }
+//   img.setAttribute("src", imgNumber);
+// });
