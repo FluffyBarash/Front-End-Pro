@@ -1,60 +1,105 @@
 // ##########_HomeWork_1_####################################################
 
-// 1.
+let prev = document.querySelector("#prev");
+let next = document.querySelector("#next");
+let img = document.querySelector("#img");
+let counter = document.querySelector(".counter");
+let offset = 5;
 
-// let lineOne = prompt(`Ведите данные первое линии:`);
-// let lineTwo = prompt(`Ведите данные второй линии:`);
-// let lineThree = prompt(`Ведите данные третьей линии:`);
+prev.addEventListener("click", () => {
+  offset -= 1;
+  console.log(offset);
+  if (offset == 1) {
+    counter.innerText = "1";
+    prev.style.opacity = 0;
+    prev.style.transform = "translateX(-2000px)";
+    img.setAttribute("src", "images/jpg.1.jpg");
+  } else if (offset == 2) {
+    counter.innerText = "2";
+    prev.style.opacity = 1;
+    prev.style.transform = "translateX(0px)";
+    img.setAttribute("src", "images/jpg.2.jpg");
+  } else if (offset == 3) {
+    counter.innerText = "3";
+    img.setAttribute("src", "images/jpg.3.jpg");
+  } else if (offset == 4) {
+    counter.innerText = "4";
+    img.setAttribute("src", "images/jpg.4.jpg");
+  } else if (offset == 5) {
+    counter.innerText = "5";
+    img.setAttribute("src", "images/jpg.5.jpg");
+  } else if (offset == 6) {
+    counter.innerText = "6";
+    img.setAttribute("src", "images/jpg.6.jpg");
+  } else if (offset == 7) {
+    counter.innerText = "7";
+    img.setAttribute("src", "images/jpg.7.jpg");
+  } else if (offset == 8) {
+    counter.innerText = "8";
+    img.setAttribute("src", "images/jpg.8.jpg");
+  } else if (offset == 9) {
+    counter.innerText = "9";
+    img.setAttribute("src", "images/jpg.9.jpg");
+  } else if (offset == 10) {
+    counter.innerText = "10";
+    next.style.opacity = 1;
+    next.style.transform = "translateX(0px)";
+    img.setAttribute("src", "images/jpg.10.jpg");
+  } else if (offset == 11) {
+    counter.innerText = "11";
+    next.style.opacity = 0;
+    next.style.transform = "translateX(2000px)";
+    img.setAttribute("src", "images/jpg.11.jpg");
+  }
+});
 
-// alert(`Получилось: ${lineOne + lineTwo + lineThree}`);
+next.addEventListener("click", () => {
+  offset += 1;
+  console.log(offset);
+  if (offset == 1) {
+    counter.innerText = "1";
+    prev.style.opacity = 0;
+    prev.style.transform = "translateX(-2000px)";
+    img.setAttribute("src", "images/jpg.1.jpg");
+  } else if (offset == 2) {
+    counter.innerText = "2";
+    prev.style.opacity = 1;
+    prev.style.transform = "translateX(0px)";
+    img.setAttribute("src", "images/jpg.2.jpg");
+  } else if (offset == 3) {
+    counter.innerText = "3";
+    img.setAttribute("src", "images/jpg.3.jpg");
+  } else if (offset == 4) {
+    counter.innerText = "4";
+    img.setAttribute("src", "images/jpg.4.jpg");
+  } else if (offset == 5) {
+    counter.innerText = "5";
+    img.setAttribute("src", "images/jpg.5.jpg");
+  } else if (offset == 6) {
+    counter.innerText = "6";
+    img.setAttribute("src", "images/jpg.6.jpg");
+  } else if (offset == 7) {
+    counter.innerText = "7";
+    img.setAttribute("src", "images/jpg.7.jpg");
+  } else if (offset == 8) {
+    counter.innerText = "8";
+    img.setAttribute("src", "images/jpg.8.jpg");
+  } else if (offset == 9) {
+    counter.innerText = "9";
+    img.setAttribute("src", "images/jpg.9.jpg");
+  } else if (offset == 10) {
+    counter.innerText = "10";
+    next.style.opacity = 1;
+    next.style.transform = "translateX(0px)";
+    img.setAttribute("src", "images/jpg.10.jpg");
+  } else if (offset == 11) {
+    counter.innerText = "11";
+    next.style.opacity = 0;
+    next.style.transform = "translateX(2000px)";
+    img.setAttribute("src", "images/jpg.11.jpg");
+  }
+});
 
-// 2.
-
-// let number = prompt(`Ведите пятизначное число:`);
-// let numberLength = number.length;
-
-// if (isNaN(number)) {
-//   alert("Error! Водить нужно цифры.");
-// } else if (numberLength > 5) {
-//   alert("Error! Чисел должно быть не больше пяти.");
-// } else if (numberLength < 5) {
-//   alert("Error! Недостаточно чисел.");
-// } else if (numberLength == 5) {
-//   alert(
-//     `Answer: ${number[0]} ${number[1]} ${number[2]} ${number[3]} ${number[4]}`
-//   );
-// }
-
-// ##########_HomeWork_2_####################################################
-
-let button = document.querySelector(".button");
-let img = document.querySelector(".img");
-
-// button.addEventListener("click", () => {
-//   let imgNumber = "";
-//   let numberRandom = Math.floor(Math.random() * 11);
-//   if (numberRandom == 1) {
-//     imgNumber = "images/jpg.1.jpg";
-//   } else if (numberRandom == 2) {
-//     imgNumber = "images/jpg.2.jpg";
-//   } else if (numberRandom == 3) {
-//     imgNumber = "images/jpg.3.jpg";
-//   } else if (numberRandom == 4) {
-//     imgNumber = "images/jpg.4.jpg";
-//   } else if (numberRandom == 5) {
-//     imgNumber = "images/jpg.5.jpg";
-//   } else if (numberRandom == 6) {
-//     imgNumber = "images/jpg.6.jpg";
-//   } else if (numberRandom == 7) {
-//     imgNumber = "images/jpg.7.jpg";
-//   } else if (numberRandom == 8) {
-//     imgNumber = "images/jpg.8.jpg";
-//   } else if (numberRandom == 9) {
-//     imgNumber = "images/jpg.9.jpg";
-//   } else if (numberRandom == 10) {
-//     imgNumber = "images/jpg.10.jpg";
-//   } else if (numberRandom == 11) {
-//     imgNumber = "images/jpg.11.jpg";
-//   }
-//   img.setAttribute("src", imgNumber);
-// });
+if (offset == 5) {
+  img.setAttribute("src", "images/jpg.5.jpg");
+}

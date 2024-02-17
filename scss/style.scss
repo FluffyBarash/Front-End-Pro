@@ -78,32 +78,70 @@ img {
 
 // #########_Header_###################################################
 
-.button__body {
+.header__body {
+  align-items: center;
   display: flex;
-  padding-top: 50px;
-  .button {
-    margin: 0 auto;
-    padding: 15px 25px 15px 25px;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 50px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  & img {
+    max-width: 500px;
+    border-radius: 15px;
+  }
+}
+
+.button__prev {
+  padding: 0px 50px;
+  #prev {
+    padding: 10px 20px 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
     background-color: orangered;
-    border: none;
     color: white;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     &:hover {
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0px 0px 5px black;
+      transition: all 0.5s ease;
       background-color: green;
+      box-shadow: 1px 1px 10px gray;
     }
   }
 }
 
-#img {
-  width: 100%;
-  display: flex;
-  margin-top: 50px;
-  & img {
-    max-width: 400px;
-    max-height: 400px;
-    margin: 0 auto;
+.button__next {
+  padding: 0px 50px;
+  #next {
+    padding: 10px 20px 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: orangered;
+    color: white;
+    transition: all 0.5s ease;
+    &:hover {
+      transition: all 0.5s ease;
+      background-color: green;
+      box-shadow: 1px 1px 10px gray;
+    }
+  }
+}
+
+.counter__body {
+  background-color: orangered;
+  border-radius: 10px;
+  margin-top: 20px;
+  & .counter {
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
   }
 }
