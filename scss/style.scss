@@ -12,6 +12,77 @@ body {
   font-size: 16px;
   height: 100%;
   overflow-x: hidden;
+  .roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
 }
 
 *,
@@ -79,69 +150,95 @@ img {
 // #########_Header_###################################################
 
 .header__body {
-  align-items: center;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin-top: 50px;
+  padding-top: 110px;
+  background-color: cadetblue;
 }
 
-.slider {
-  display: flex;
-  align-items: center;
+.reaction_window__body {
   margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  width: 800px;
+  height: 400px;
+  background-color: rgb(55, 155, 55);
+  border-radius: 15px;
+  border: 4px solid gold;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.7);
+  position: relative;
 }
 
-.img {
+.reaction_window__title {
+  color: white;
+  margin: 0 auto;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.smile_section {
+  margin-top: 15px;
   display: flex;
-  align-items: center;
-  & img {
-    max-width: 500px;
-    border-radius: 15px;
-  }
-}
-
-.button__prev {
-  padding: 0px 50px;
-  #prev {
-    padding: 10px 20px 10px 20px;
-    border: 1px solid white;
-    border-radius: 5px;
-    background-color: orangered;
-    color: white;
+  & p {
+    width: 150px;
+    padding: 0px;
+    font-size: 80px;
     transition: all 0.5s ease;
+    border-radius: 50%;
     &:hover {
       transition: all 0.5s ease;
-      background-color: green;
-      box-shadow: 1px 1px 10px gray;
+      margin-top: -3px;
+      font-size: 85px;
+      cursor: pointer;
+      animation: render 2s ease-in-out infinite;
     }
   }
 }
 
-.button__next {
-  padding: 0px 50px;
-  #next {
-    padding: 10px 20px 10px 20px;
-    border: 1px solid white;
-    border-radius: 5px;
-    background-color: orangered;
-    color: white;
-    transition: all 0.5s ease;
-    &:hover {
-      transition: all 0.5s ease;
-      background-color: green;
-      box-shadow: 1px 1px 10px gray;
-    }
+@keyframes render {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-20deg);
+  }
+  80% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
-.counter__body {
-  background-color: orangered;
+.counter_section {
+  display: flex;
+  position: absolute;
+  top: 230px;
+  gap: 95px;
+  padding: 0px 46px 0px 46px;
+  & p {
+    border-radius: 10px;
+    background-color: white;
+    max-width: 50px;
+    min-width: 50px;
+    font-size: 18px;
+  }
+}
+
+.reaction_window__button {
+  top: 300px;
+  left: 43%;
+  position: absolute;
+  cursor: pointer;
+  padding: 15px 25px;
   border-radius: 10px;
-  margin-top: 20px;
-  & .counter {
-    padding: 10px 20px;
-    color: white;
-    font-size: 20px;
+  border: 1px solid white;
+  background-color: rgb(70, 128, 229);
+  color: white;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: orangered;
+    transition: all 0.5s ease;
   }
 }

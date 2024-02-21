@@ -4,27 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <header class="header">
       <div class="header__body">
-        <div class="up">
-          <div class="slider">
-            <div class="button__prev">
-              <button id="prev">PREV</button>
+        <div class="reaction_window">
+          <div class="reaction_window__body">
+            <h1 class="reaction_window__title">ВАША РЕАКЦИЯ:</h1>
+            <div class="smile_section">
+              <p id="smiley_one"><span>😍</span></p>
+              <p id="smiley_two"><span>😀</span></p>
+              <p id="smiley_three"><span>🤨</span></p>
+              <p id="smiley_four"><span>😕</span></p>
+              <p id="smiley_five"><span>😫</span></p>
             </div>
-            <div class="img">
-              <img id="img" />
+            <div class="counter_section">
+              <p id="counter_one">0</p>
+              <p id="counter_two">0</p>
+              <p id="counter_three">0</p>
+              <p id="counter_four">0</p>
+              <p id="counter_five">0</p>
             </div>
-            <div class="button__next">
-              <button id="next">NEXT</button>
-            </div>
-          </div>
-        </div>
-        <div class="bottom">
-          <div class="counter__body">
-            <p class="counter">5</p>
+            <button class="reaction_window__button">CANCEL</button>
           </div>
         </div>
       </div>
