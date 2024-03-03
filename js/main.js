@@ -1,59 +1,35 @@
-// ##########_HomeWork_1_####################################################
+// ####################_HomeWork_1_####################
 
-const counterOne = document.querySelector("#counter_one");
-const counterTwo = document.querySelector("#counter_two");
-const counterThree = document.querySelector("#counter_three");
-const counterFour = document.querySelector("#counter_four");
-const counterFive = document.querySelector("#counter_five");
+// const length = parseInt(prompt("Введите длину массива:"));
+// const userArray = [];
 
-const smileyOne = document.querySelector("#smiley_one");
-const smileyTwo = document.querySelector("#smiley_two");
-const smileyThree = document.querySelector("#smiley_three");
-const smileyFour = document.querySelector("#smiley_four");
-const smileyFive = document.querySelector("#smiley_five");
+// for (let i = 0; i < length; i++) {
+//   const element = prompt(`Введите элемент массива ${i + 1}:`);
+//   userArray.push(element);
+// }
 
-const button = document.querySelector(".reaction_window__button");
+// userArray.splice(1, 3);
 
-let number1 = 0;
-let number2 = 0;
-let number3 = 0;
-let number4 = 0;
-let number5 = 0;
+// const arrayElement = document.querySelector("#array");
 
-smileyOne.addEventListener("click", () => {
-  number1 = number1 + 1;
-  counterOne.innerText = number1;
-});
+// for (const item of userArray) {
+//   arrayElement.innerHTML += `<p>${item}</p>`;
+// }
 
-smileyTwo.addEventListener("click", () => {
-  number2 = number2 + 1;
-  counterTwo.innerText = number2;
-});
+// ####################_HomeWork_2_####################
 
-smileyThree.addEventListener("click", () => {
-  number3 = number3 + 1;
-  counterThree.innerText = number3;
-});
-
-smileyFour.addEventListener("click", () => {
-  number4 = number4 + 1;
-  counterFour.innerText = number4;
-});
-
-smileyFive.addEventListener("click", () => {
-  number5 = number5 + 1;
-  counterFive.innerText = number5;
-});
-
-button.addEventListener("click", () => {
-  number1 = 0;
-  number2 = 0;
-  number3 = 0;
-  number4 = 0;
-  number5 = 0;
-  counterOne.innerText = number1;
-  counterTwo.innerText = number2;
-  counterThree.innerText = number3;
-  counterFour.innerText = number4;
-  counterFive.innerText = number5;
-});
+// let ladder = {
+//   step: 0,
+//   up: function () {
+//     this.step++;
+//     return this;
+//   },
+//   down: function () {
+//     this.step--;
+//     return this;
+//   },
+//   showStep: function () {
+//     alert(this.step);
+//     return this;
+//   },
+// };
