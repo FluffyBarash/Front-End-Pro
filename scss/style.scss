@@ -148,3 +148,56 @@ img {
 }
 
 // #########_Header_###################################################
+
+.header {
+  display: flex;
+}
+
+.section_one {
+  display: flex;
+  flex-direction: column;
+}
+
+.categories-box {
+  padding: 100px 50px 100px 50px;
+  background-color: beige;
+  text-align: center;
+  transition: all 0.5s ease;
+  border: 1px solid black;
+  &:hover {
+    cursor: pointer;
+    background-color: azure;
+    transition: all 0.5s ease;
+  }
+}
+
+.section_two {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.info-block {
+  background-color: cadetblue;
+  width: 350px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  & p {
+    font-size: 20px;
+  }
+  &:hover {
+    & p {
+      cursor: pointer;
+    }
+  }
+}
+
+#button {
+  display: none;
+}
