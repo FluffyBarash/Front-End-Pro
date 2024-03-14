@@ -1,35 +1,37 @@
 // ####################_HomeWork_1_####################
 
-// const length = parseInt(prompt("Введите длину массива:"));
-// const userArray = [];
+const blockPost = document.querySelector("#block-post");
+const idRequest = prompt("Ведите id поста от 1 до 100:") - 1;
 
-// for (let i = 0; i < length; i++) {
-//   const element = prompt(`Введите элемент массива ${i + 1}:`);
-//   userArray.push(element);
-// }
+if (isNaN(idRequest)) {
+  console.error("Error! You wrote the letters.");
+  alert("Error! You wrote the letters.");
+} else if (idRequest > 99 || idRequest <= -1) {
+  alert("Error! Non-compliance with the rules.");
+  console.error("Error! Non-compliance with the rules.");
+}
 
-// userArray.splice(1, 3);
+async function washingMachine() {
+  const url = "https://jsonplaceholder.typicode.com/posts";
+  const response = await fetch(url);
+  const data = await response.json();
+  const post = data[idRequest];
 
-// const arrayElement = document.querySelector("#array");
+  const h2 = document.createElement("h2");
+  h2.innerText = post.title;
+  blockPost.append(h2);
 
-// for (const item of userArray) {
-//   arrayElement.innerHTML += `<p>${item}</p>`;
-// }
+  const p = document.createElement("p");
+  p.innerText = post.body;
+  blockPost.append(p);
 
-// ####################_HomeWork_2_####################
+  const span = document.createElement("span");
+  span.innerText = post.id;
+  blockPost.append(span);
 
-// let ladder = {
-//   step: 0,
-//   up: function () {
-//     this.step++;
-//     return this;
-//   },
-//   down: function () {
-//     this.step--;
-//     return this;
-//   },
-//   showStep: function () {
-//     alert(this.step);
-//     return this;
-//   },
-// };
+  const button = document.createElement("button");
+  button.innerText = "Comments";
+  blockPost.append(button);
+}
+
+washingMachine();
