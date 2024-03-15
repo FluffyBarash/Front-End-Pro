@@ -14,7 +14,7 @@ async function washingMachine() {
   blockPost.append(title);
 
   const weather = document.createElement("p");
-  weather.innerText = `Weather ${data.weather[0].main}`;
+  weather.innerText = `Weather: ${data.weather[0].main}`;
   blockPost.append(weather);
 
   const temp = document.createElement("p");
