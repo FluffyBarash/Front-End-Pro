@@ -1,37 +1,45 @@
-// ####################_HomeWork_1_####################
+// // ####################_HomeWork_1_####################
 
 const blockPost = document.querySelector("#block-post");
-const idRequest = prompt("Ведите id поста от 1 до 100:") - 1;
 
-if (isNaN(idRequest)) {
-  console.error("Error! You wrote the letters.");
-  alert("Error! You wrote the letters.");
-} else if (idRequest > 99 || idRequest <= -1) {
-  alert("Error! Non-compliance with the rules.");
-  console.error("Error! Non-compliance with the rules.");
-}
+const city = prompt("Enter your city (example: LVIV):");
 
 async function washingMachine() {
-  const url = "https://jsonplaceholder.typicode.com/posts";
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=5d066958a60d315387d9492393935c19`;
   const response = await fetch(url);
   const data = await response.json();
-  const post = data[idRequest];
 
-  const h2 = document.createElement("h2");
-  h2.innerText = post.title;
-  blockPost.append(h2);
+  const title = document.createElement("h2");
+  title.innerText = city;
+  blockPost.append(title);
 
-  const p = document.createElement("p");
-  p.innerText = post.body;
-  blockPost.append(p);
+  const weather = document.createElement("p");
+  weather.innerText = `Weather ${data.weather[0].main}`;
+  blockPost.append(weather);
 
-  const span = document.createElement("span");
-  span.innerText = post.id;
-  blockPost.append(span);
+  const temp = document.createElement("p");
+  temp.innerText = `Temperature: ${data.main.temp}`;
+  blockPost.append(temp);
 
-  const button = document.createElement("button");
-  button.innerText = "Comments";
-  blockPost.append(button);
+  const pressure = document.createElement("p");
+  pressure.innerText = `Pressure: ${data.main.pressure}`;
+  blockPost.append(pressure);
+
+  const deg = document.createElement("p");
+  deg.innerText = `Direction in degrees: ${data.wind.deg}`;
+  blockPost.append(deg);
+
+  const speed = document.createElement("p");
+  speed.innerText = `Speed: ${data.wind.speed}`;
+  blockPost.append(speed);
+
+  const country = document.createElement("p");
+  country.innerText = `Country: ${data.sys.country}`;
+  blockPost.append(country);
+
+  const images = document.createElement("img");
+  images.setAttribute("src", "https://openweathermap.org/img/w/10d.png");
+  blockPost.append(images);
 }
 
 washingMachine();
