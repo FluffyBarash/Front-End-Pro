@@ -146,23 +146,3 @@ img {
   max-width: 1080px;
   margin: 0px auto;
 }
-
-body {
-  background-color: darkcyan;
-}
-
-.windowInfo {
-  border: 3px solid white;
-  background-color: burlywood;
-  width: 500px;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 100px;
-}
-.windowInfo p {
-  color: white;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 24px;
-}
