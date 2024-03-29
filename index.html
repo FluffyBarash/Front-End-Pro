@@ -13,9 +13,74 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="myOrdersWindow">
+      <div class="sectionOne">
+        <h1>My orders</h1>
+        <p id="ext">EXT</p>
+      </div>
+      <div class="sectionTwo">
+        <p id="empty">empty</p>
+        <div class="myOrdersLine"></div>
+      </div>
+    </div>
     <header class="header">
-      <div class="windowInfo"></div>
+      <a href="#" id="myOrders">My orders</a>
     </header>
+    <main class="main">
+      <h1 class="title">categories</h1>
+      <div id="productList">
+        <div class="card">
+          <img src="images/cartoshka.jpg" />
+          <h2>potato</h2>
+          <p>
+            Карто́фель, или паслён клубнено́сный, — вид многолетних клубненосных
+            травянистых растений из рода Паслён семейства Паслёновые.
+          </p>
+          <div class="card__buttons">
+            <p id="buy">Buy</p>
+            <p class="addBasket addBasketClassic">Add to Basket</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/pomidor.jpg" width="240px" />
+          <h2>tomato</h2>
+          <p>
+            Lycopersicon — род цветковых растений семейства пасленовых. В нем
+            содержится около 13 видов томатной группы пасленовых.
+          </p>
+          <div class="card__buttons">
+            <p id="buy">Buy</p>
+            <p class="addBasket addBasketClassic">Add to Basket</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/ogurec.jpg" width="215px" />
+          <h2>cucumber</h2>
+          <p>
+            Огуре́ц обыкнове́нный, или Огурец посевно́й, — однолетнее травянистое
+            растение, вид рода Огурец семейства Тыквенные, овощная культура.
+          </p>
+          <div class="card__buttons">
+            <p id="buy">Buy</p>
+            <p class="addBasket addBasketClassic">Add to Basket</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/kapusta.jpg" />
+          <h2>cabbage</h2>
+          <p>
+            Капу́ста огоро́дная — одомашненное более 3500 лет назад двулетнее
+            растение рода Капуста семейства Капустные, важная
+            сельскохозяйственная культура, популярное овощное и декоративное
+            растение.
+          </p>
+          <div class="card__buttons">
+            <p id="buy">Buy</p>
+            <p class="addBasket addBasketClassic">Add to Basket</p>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="js/main.js"></script>
   </body>
 </html>
