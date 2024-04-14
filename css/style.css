@@ -335,3 +335,8 @@ img {
   transition: all 0.5s ease;
   background-color: deepskyblue;
 }
+
+.myOrdersLine {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
