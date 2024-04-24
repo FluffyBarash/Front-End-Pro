@@ -13,6 +13,98 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="wrapper">
+      <div class="forma">
+        <h1>Form</h1>
+        <form>
+          <input type="text" name="name" placeholder="Name" id="nameInput" />
+          <input
+            type="text"
+            name="Surname"
+            placeholder="Surname"
+            id="surnameInput"
+          />
+          <input
+            type="number"
+            name="data"
+            placeholder="Date of Birth"
+            id="dateInput"
+          />
+          <div class="floor_radio">
+            <label>
+              <p>Man</p>
+              <input type="radio" name="floor" id="manRadioInput" />
+            </label>
+            <label>
+              <p>Woman</p>
+              <input type="radio" name="floor" id="womanRadioInput" />
+            </label>
+          </div>
+          <select name="select" id="select">
+            <option value="City" disabled selected>City</option>
+            <option value="Odesssa">Odesssa</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Kyiv">Kharkiv</option>
+            <option value="Lviv">Lviv</option>
+          </select>
+          <textarea placeholder="Address" id="addressTextarea"></textarea>
+          <div class="languages__checkbox">
+            <p>Languages ​​spoken:</p>
+            <div class="languages__scroll">
+              <label>
+                <p>English</p>
+                <input type="checkbox" name="language" id="engCkeckboxInput" />
+              </label>
+              <label>
+                <p>Ukrainian</p>
+                <input type="checkbox" name="language" id="ukrCkeckboxInput" />
+              </label>
+              <label>
+                <p>Russian</p>
+                <input type="checkbox" name="language" id="rusCkeckboxInput" />
+              </label>
+              <label>
+                <p>Tyutursky</p>
+                <input type="checkbox" name="language" id="tyuCkeckboxInput" />
+              </label>
+            </div>
+          </div>
+          <button type="button" id="button">Save</button>
+        </form>
+      </div>
+      <div class="table">
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td id="nameTable"></td>
+          </tr>
+          <tr>
+            <td>Surname:</td>
+            <td id="surnameTable"></td>
+          </tr>
+          <tr>
+            <td>Date of Birth:</td>
+            <td id="dateOfBirth"></td>
+          </tr>
+          <tr>
+            <td>Floor:</td>
+            <td id="floor"></td>
+          </tr>
+          <tr>
+            <td>City:</td>
+            <td id="city"></td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td id="address"></td>
+          </tr>
+          <tr>
+            <td>Languages ​​spoken:</td>
+            <td id="languages"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
